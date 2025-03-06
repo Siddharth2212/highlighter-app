@@ -1,0 +1,63 @@
+{
+  "name": "Numici - annotate, collaborate and synthesize",
+  "short_name": "Numici",
+  "version": "1.82.0.415",
+  "version_name": "1.82.0.415 (VDVC 1.82.0.415)",
+  "manifest_version": 2,
+
+  "minimum_chrome_version": "38",
+
+  "key": "MIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDDdZ9GVrWk0fyZ622+7cHfyMY166FKSnq1KbI3GAuEAW2RrOMp38sbf4wPDMhHqJVQTtEvEYFqpSD89IV80OK3dGTf+jcBffQHaGG72aMrxNCRV9Nknq+nlrMjev1Nw4r/QLJrnKt2lz/BhQLrNVEiXYMre0f6bMbk2fa/rNSYUAAyTguKTJI1FNX6s+O/3/kRC4FyLL0tIl6E6/2zSClz2ASKdPHGEErE/kCGSJjIZ1OkLdh9W79tdI3SPS6D2HaWjAHZAlm4GCAjeOEpIZQHoSvyyqfmZcFNXRUTuL6sf0FxqBe9gMzvvUIv06IZSK8AQqnVm7LQ+tf+bLVosXSPAgMBAAECggEAHANRjn0tj1phFOuUUQGLqw0AC15NQXPR3lZZf7fnKUYjHqEOoEO+EkoswpjBuN4aeDtePkazVkYlp4X2qQrZqL1PxSH78YTMYqYSdnUcrlCI1oEl1OKWqN2E/cLKEZ5tig5gWTfyWGQY88f3wR9lFMMeN4R1rm3Em6v5ce3NPP7fEsKcxz+WJRZks+qfva2vTU99Bo8i/Tf2+ixdWSxWnUbLAl3hgmVnmX+0ni9Hn+AHiq72j/alm8PmmKkVk42evDzu8IMc4r5X9/v9s0nFMQcPDifGENmmb1OrmvVI481ic6BYN/BBrOU+18b+ybLAm/Wouna1umBaonn4TAfiUQKBgQD5eRAJz2izhGqOAz7nTnoXCDbk1EVl6aPXxq8AmLe07Y6jo47ysd2QZ5mOokQwGAwzBvfoRXqqU1+pv8WbOe8Xm7e1u/Gu7ngmf87g7piEVwe7gsiIF98I4Gwq7hxbzTJkfKb+SlzwwaC8oritpGseAcCLDfKlcjRuRIA26ogr7QKBgQDIksjST0IQBaHttO+gSypUpKehoWf2PkWFZQ8DT/mcp6Ul/7Z8FRTt0P4xjrqkoyMyfgj4MBsTQWWqcGpujKLmK4QrxHvjQ7adLi03bmOwteqabp944NTV3vlyiJPw86lcVsZOC3dTi43IoDmJwqWAv6/DYWVFqxHKsjipI2Vq6wKBgBN9YcNicMuVjL2Lg16OwvsJqUA3VTShDCvPWdyyEagQ5xPhs0lCnAysC1MZWjpnpoxV/wgmZW7pFJAua0G1RPiTMccA5+DCwKBBW+g2u7ObGP+NOB1pwALxhYHVGGITpdwz4Nf890XX2rbh/4uRTM0LVf+HF23VfkMfFuUzbXABAoGBAJoAmlFgqcjDimGJ27OoAwiapFtmIvzfM2IJBk30yiOOVS+n9+WuCjPPlF1YydY/rHbIbvqhdSiDvhvv1MitEybHouQ4KSeGhmCJZA57o++6vjd1WNznRIQygDWAyJbpf9B2kCy8gRKUxHiXDZbI7Wq9w6aw0aF8iFyqGvdDRkuhAoGABaj1BW8kSKjr9joRHGKwAppmtJj10o/LPiCreBoaSRg6PgHs2zV+3+ldFOjIilZfAPHa6+RRDYIiP5L72iVejNF6U8438cITBNxMuGemr/EHb0jK+0NN+Nydbl5PqanrI6o6LJ5ITf2gWCvgyH6m+3vTJ+TiNeiEwav92ONRwjI=",
+
+
+  "description": "Use Numici to organize, highlight, annotate and synthesize content in web pages and documents collaboratively or individually.",
+  "icons": {
+    "16": "images/icon16.png",
+    "48": "images/icon48.png",
+    "128": "images/icon128.png"
+  },
+
+  "homepage_url": "https://www.numici.com",
+
+  "incognito": "split",
+
+  "options_ui": {
+    "page": "lib/options.html",
+    "chrome_style": true
+  },
+
+  "offline_enabled": false,
+  "permissions": [
+    "tabs",
+    "<all_urls>",
+    "storage",
+    "webNavigation"
+  ],
+  "content_security_policy": "script-src 'self' 'unsafe-eval' https://www.google-analytics.com; object-src 'self'; font-src 'self' data:;",
+
+  "background": {
+    "persistent": true,
+    "scripts": [
+      "settings-data.js",
+      "client/build/scripts/jquery.bundle.js",
+      "client/build/scripts/raven.bundle.js",
+      "extension.bundle.js"
+    ]
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/browser-icon-inactive.png",
+      "38": "images/browser-icon-inactive@2x.png"
+    }
+  },
+  "web_accessible_resources": [
+    "client/*",
+    "content/*",
+    "lib/*",
+    "help/*",
+    "content/web/viewer.html"
+  ],
+  "externally_connectable": {
+    "matches": ["https://app.vidivicitechnologies.com/*"]
+  }
+}
